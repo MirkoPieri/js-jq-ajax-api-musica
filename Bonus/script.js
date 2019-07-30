@@ -28,7 +28,7 @@ $.ajax (
         console.log(genere);
         for (var i = 0; i < arrayMusica.length; i++) {
           var genereMusica = arrayMusica[i].genre;
-
+          // condizione per verificare genere musica
           if (genereMusica == genere) {
                 var context = {Author: arrayMusica[i].author, linkMusic: arrayMusica[i].poster, anno: arrayMusica[i].year, title: arrayMusica[i].title };
                 var html = template(context);
@@ -43,6 +43,7 @@ $.ajax (
           }
       });
     },
+    // parte dell'errore collegamnento al server
     error: function(richiesta,stato,errore){
      console.log("C'è un problema con il server");
     }
